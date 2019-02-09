@@ -1,4 +1,4 @@
-require 'rails_helper'
+rarequire 'rails_helper'
 describe User do
   describe '#create' do
     it "is valid with a nickname, email, password, password_confirmation" do
