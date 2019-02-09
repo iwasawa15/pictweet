@@ -20,14 +20,14 @@
       </a>
     </span>
   </div>
-  <div class="container"> 
+  <div class="container">
     <% if current_user %>
-      <%= form_tag("/tweets/#{@tweet.id}/comments", method: :post) do %>
-        <textarea name="text" placeholder="コメントする" rows="2" cols="30"></textarea>
+      <%= form_tag("/tweets/#{@tweet.id}/comments",  method: :post,  id: "new_comment" ) do %>
+        <textarea cols="30" name="text" placeholder="コメントする" rows="2" class="textbox"></textarea>
         <input type="submit" value="SENT">
       <% end %>
     <% end %>
-    <div class="comments">   
+    <div class="comments">
       <h4>＜コメント一覧＞</h4>
       <% if @comments %>
         <% @comments.each do |comment| %>
